@@ -6,10 +6,13 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
   // This widget is the root of your application.
+
+
   @override
   Widget build(BuildContext context) {
+    String decriptionDummy="holiwis jajjaj. XD";
+
     return MaterialApp(
       title: 'Flutter App1',
       theme: ThemeData(
@@ -32,27 +35,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
 
-        body: Center(
-            child: Stack( children: [
-              Image.network('https://pbs.twimg.com/profile_images/1455573076016574467/nmol2VFD_400x400.jpg',
-              fit: BoxFit.cover,
-              height: double.infinity,
-              width: double.infinity,
-              ),
-              Center(
-                child: Container(
-                  height: 50.0,
-                  color: Colors.black,
-                  child: Center(
-                    child: Text("VAMOS!!!",
-                    style: TextStyle(color: Colors.white,
-                        fontSize:20.0),
-                    ),
-                  ),
-                ),
-              ),
-            ]),
-        ),
+        body: new DescriptionPlaces("CARTEGENA",4,decriptionDummy),
       )//const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
